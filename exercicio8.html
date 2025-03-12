@@ -14,6 +14,7 @@
         let descontoIR = 0;
         let descontoINSS = salarioBruto * 0.10; 
         let fgts = salarioBruto * 0.11;
+        let sindicato = salarioBruto * 0.03;
 
         let totalDescontos = 0;
         let salarioLiquido = 0;
@@ -28,7 +29,7 @@
             descontoIR = salarioBruto * 0.20;
         }
 
-        totalDescontos = descontoIR + descontoINSS;
+        totalDescontos = descontoIR + descontoINSS + sindicato;
         salarioLiquido = salarioBruto - totalDescontos;
 
         alert(`Salário bruto (R$ ${valorHora} * ${horasTrabalhadas}) : R$ ${salarioBruto.toFixed(2)}` +
