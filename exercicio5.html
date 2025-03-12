@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        let litros = parseFloat(prompt("Informe o número de litros vendidos:"));
+        let vLitro = parseFloat(prompt("Informe o valor do litro do combustível:"));
+        let Combustivel = prompt("Informe o tipo de combustível (A para Álcool, G para Gasolina):");
+
+        let desconto = 0;
+        let valorFinal = 0;
+
+        if (Combustivel === "A") { 
+            if (litros <= 20) {
+                desconto = 0.03;
+            } else {
+                desconto = 0.05;
+            }
+        } else if (Combustivel === "G") {
+            if (litros <= 20) {
+                desconto = 0.04;
+            } else {
+                desconto = 0.06;
+            }
+        } else {
+            alert("Tipo de combustível inválido! Informe 'A' para Álcool ou 'G' para Gasolina.");
+        }
+
+        if (desconto > 0) {
+            let valorDesconto = litros * vLitro * desconto;
+            valorFinal = (litros * vLitro) - valorDesconto;
+
+            alert(`O valor a ser pago pelo cliente é: R$ ${valorFinal.toFixed(2)}`);
+        }
+    </script>
+
+</body>
+</html>

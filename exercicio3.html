@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+      let Macas = parseInt(prompt("Quantas maçãs você comprou?"));
+        
+        let precoPorMaca;
+        if (Macas < 12) {
+            precoPorMaca = 0.30;
+        } else {
+            precoPorMaca = 0.25;
+        }
+        
+        let valorTotal = Macas * precoPorMaca;
+        
+        alert(`Você comprou ${Macas} maçãs. O valor total da compra é: R$ ${valorTotal.toFixed(2)}`);
+
+    </script>
+</body>
+</html>

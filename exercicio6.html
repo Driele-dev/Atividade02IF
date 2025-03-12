@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        let time1 = prompt("Nome do primeiro time");
+        let time2 = prompt("Nome do segundo time");
+
+        let golTime1 = parseInt(prompt(`Quantos gols ${time1} fez?`));
+        let golTime2 = parseInt(prompt(`Quantos gols ${time2} fez?`));
+
+        if (golTime1 > golTime2) {
+            alert(`A vitoria foi do time ${time1} com ${golTime1} a ${golTime2}.`);
+        } else if (golTime1 < golTime2){
+            alert(`A vitoria foi do time ${time2} com ${golTime2} a ${golTime1}.`);
+        } else {
+            alert(`O jogo terminou em empate com o placar ${golTime1} a ${golTime2}.`)
+        }
+    </script>
+
+</body>
+</html>
